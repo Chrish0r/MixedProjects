@@ -8,7 +8,7 @@ public class Main {
 		s.name = "Gadekk";
 		s.stNr = 123456;
 		s.adress = new Adress(); //adress ist ein Objekt vom Typ Adress
-		s.adress.street = "HochschulstraÃŸe 1";
+		s.adress.street = "Hochschulstraße 1";
 		s.adress.city = "Rosenheim";
 		
 		s.sayHello();
