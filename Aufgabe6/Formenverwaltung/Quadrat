@@ -1,0 +1,30 @@
+package formenverwaltung;
+
+public class Quadrat {
+	// attributes
+	private double laenge;
+	
+	// getters and setters
+	protected double getLaenge() {
+		return laenge;
+	}
+
+	protected void setLaenge(double laenge) {
+		this.laenge = laenge;
+	}
+	
+	// constructor
+	public Quadrat(double laenge) {
+		super();
+		this.laenge = laenge;
+	}
+	
+	// methods 
+	public double berechneUmfang(double laenge) {
+		return 4 * laenge;
+		
+	}
+	public double berechneFlaeche(double l) {
+		return Math.pow(laenge, 2);
+	}
+}
