@@ -1,0 +1,31 @@
+package formenverwaltung;
+
+public class Rechteck extends Quadrat {
+	// attributes
+	private double breite;
+	
+	// getters and setters
+	public double getBreite() {
+		return breite;
+	}
+	public double setBreite() {
+		return breite;
+	}
+	
+	// constructor
+	public Rechteck(double laenge, double breite) { // vererbter Parameter muss auch übergeben werden
+		super(laenge); // macht kenntlich welcher Parameter von superKlasse (Vaterklasse) verwerbt wird
+		this.breite = breite;
+	}
+	
+	// methods
+	public double berechneUmfang(double laenge, double breite) {
+		double umfang = 2 * laenge + 2 * breite;
+		return umfang;
+		
+	}
+	public double berechneFlaeche(double l, double b) {
+		return l * b;
+	}
+	
+}
