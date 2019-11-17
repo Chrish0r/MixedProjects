@@ -1,0 +1,50 @@
+package formenverwaltung;
+
+import java.util.Scanner;
+import java.util.Locale;
+import java.text.DecimalFormat;
+
+public class Program {
+	private static DecimalFormat df2 = new DecimalFormat("#.##");
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		sc.useLocale(Locale.ENGLISH);
+		
+		System.out.println("Welche Seitenlaenge besitzt das Quadrat? Bitte Wert eingeben: ");
+		double laenge = sc.nextDouble();
+		
+		// Erzeugen von Quadrat-Objekten
+		Quadrat q1 = new Quadrat(laenge);
+		// Quadrat q2 = new Quadrat(laenge);
+		// Quadrat q3 = new Quadrat(laenge);
+		
+		//Methodenaufruf und Ausgabe
+		System.out.println("Der Umfang des Quadrates beträgt " + 
+							df2.format(q1.berechneUmfang(q1.getLaenge())) 
+							+ " Einheiten.");
+		System.out.println("Die Fläche des Quadrates beträgt " + 
+							df2.format(q1.berechneFlaeche(q1.getLaenge())) + 
+							" Einheiten.");
+		System.out.println();
+		
+		System.out.println("Welche Länge besitzt ihr Rechteck? Bitte hier einen Wert eingeben: ");
+		double laengeRechteck = sc.nextDouble();
+		System.out.println("Welche Breite besitzt ihr Rechteck? Bitte hier einen Wert eingeben: ");
+		double breite = sc.nextDouble();
+		
+		// Erzeugen con Rechteck-Objekten
+		Rechteck r1 = new Rechteck(laengeRechteck, breite);
+		
+		//Methodenaufruf und Ausgabe
+		System.out.println("Der Umfang des Rechtecks beträgt: " + 
+						  df2.format(r1.berechneUmfang(r1.getLaenge(), r1.getBreite())) +
+						  " Einheiten.");
+		System.out.println("Die Fläche des Rechtecks beträgt: " + 
+				  df2.format(r1.berechneFlaeche(r1.getLaenge(), r1.getBreite())) +
+				  " Einheiten.");
+		
+		
+		sc.close();
+	}
+}
