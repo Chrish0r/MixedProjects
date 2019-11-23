@@ -1,0 +1,20 @@
+package staticStudent;
+
+public class Programm {
+	public static void main(String[] args) {
+		// creating objects
+		Student tomStudent = new Student();
+		tomStudent.setFirstName("Tom");
+		tomStudent.setLastName("Teuer");
+		
+		Student reginaStudent = new Student();
+		reginaStudent.setFirstName("Regina");
+		reginaStudent.setLastName("Reich");
+		
+		Student leaStudent = new Student();
+		leaStudent.setFirstName("Lea");
+		leaStudent.setLastName("Lustig");
+		
+		// ToDo weiter mit Teilaufgabe3 - gebe mit Liste aus und danach ohne Liste
+	}
+}
