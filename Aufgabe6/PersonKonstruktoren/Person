@@ -1,0 +1,25 @@
+package person;
+
+public class Person {
+	String firstName;
+	String lastName;
+	
+	public Person() {
+		System.out.println("Created new person");
+	}
+	
+	public Person(String firstName) {
+		this.firstName = firstName;
+		System.out.println("Created person " + firstName);
+	}
+	public Person(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		System.out.println("Created person " + firstName + " " + lastName);
+	}
+	
+	public String printOut() {
+		String str =  "Person[firstName = " + this.firstName + ", lastName = " + this.lastName + "]";
+		return str;
+	}
+}
