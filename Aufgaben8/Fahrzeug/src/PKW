@@ -1,0 +1,57 @@
+package fahrzeuge;
+
+public class PKW extends Fahrzeug {
+	private int anzahlTueren;
+	private int sitzplaetze;
+	
+	// getters and setters
+	public int getAnzahlTueren() {
+		return anzahlTueren;
+	}
+	public void setAnzahlTueren(int anzahlTueren) {
+		this.anzahlTueren = anzahlTueren;
+	}
+	public int getSitzplaetze() {
+		return sitzplaetze;
+	}
+	public void setSitzplaetze(int sitzplaetze) {
+		this.sitzplaetze = sitzplaetze;
+	}
+	
+	// constructor
+	public PKW(String Kennzeichen, boolean istBenziner, COLOR color, int ps, int anzahlTueren, int sitzplaetze) {
+		super(Kennzeichen, istBenziner, color, ps);
+		this.anzahlTueren = anzahlTueren;
+		this.sitzplaetze = sitzplaetze;
+	}
+	
+	// methoden
+	public boolean equals(Object obj) {
+		// early outs
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if(getClass() != obj.getClass()) {
+			return false;
+		}
+		// Das zu verlgeichende Objekt in Variable benennen
+		PKW other = (PKW) obj;
+		// konkrete Vergleiche
+		if(this.ps != other.ps) {
+			return false;
+		}
+		if(this.color != other.color) {
+			return false;
+		}
+		if(this.sitzplaetze != other.sitzplaetze) {
+			return false;
+		}
+		if(this.istBenziner != other.istBenziner) {
+			return false;
+		}
+		return true;
+	}	
+}
