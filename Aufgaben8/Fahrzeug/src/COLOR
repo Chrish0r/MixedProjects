@@ -1,0 +1,9 @@
+package fahrzeuge;
+
+public enum COLOR {
+	RED,
+	GREEN,
+	BLUE,
+	YELLOW,
+	BLACK
+}
