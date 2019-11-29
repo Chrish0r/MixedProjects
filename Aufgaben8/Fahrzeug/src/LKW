@@ -1,0 +1,53 @@
+package fahrzeuge;
+
+public class LKW extends Fahrzeug{
+	// attibutes
+	private int anzahlReifen;
+	private int ladegewicht;
+	
+	// getters and setters
+	public int getAnzahlReifen() {
+		return anzahlReifen;
+	}
+	public void setAnzahlReifen(int anzahlReifen) {
+		this.anzahlReifen = anzahlReifen;
+	}
+	public int getLadegewicht() {
+		return ladegewicht;
+	}
+	public void setLadegewicht(int ladegewicht) {
+		this.ladegewicht = ladegewicht;
+	}
+	
+	// constructor
+	public LKW(String Kennzeichen, boolean istBenziner, COLOR color, int ps, int anzahlReifen, int ladegewicht) {
+		super(Kennzeichen, istBenziner, color, ps);
+		this.anzahlReifen = anzahlReifen;
+		this.ladegewicht = ladegewicht;
+	}
+	
+	// methods
+	
+	public boolean equals(Object obj) {
+		if(this == obj) {
+			return true;
+		}
+		if(obj == null) {
+			return false;
+		}
+		if(this.getClass() != obj.getClass()) {
+			return false;
+		}
+		LKW other = (LKW) obj;
+		
+		if(this.getAnzahlReifen() != other.getAnzahlReifen()) {
+			return false;
+		}
+		if(this.getLadegewicht() != other.getLadegewicht()) {
+			return false;
+		}
+		return true;
+	}
+	
+	
+}
