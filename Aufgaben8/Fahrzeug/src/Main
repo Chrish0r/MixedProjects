@@ -1,0 +1,42 @@
+package fahrzeuge;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// creating objects of PKW
+		Fahrzeug bmw = new PKW("RGBG2019", true, COLOR.BLUE, 180, 4, 5);
+		Fahrzeug mini = new PKW("Deu2020", false, COLOR.YELLOW, 120, 2, 3);
+		Fahrzeug audi = new PKW("Koeln1289", true, COLOR.RED, 210, 4, 5);
+		Fahrzeug bmw2 = new PKW("RGBG2019", true, COLOR.BLUE, 180, 4, 5);
+		Fahrzeug mercedes = new PKW("Berlin1996", true, COLOR.BLUE, 180, 4, 5);
+		
+		boolean comparison = bmw.equals(mercedes);
+		
+		System.out.println("Die zu vergleichenden PKWs sind gemäß den "
+				+ "zu verglichenen Attributen gleich?\n" + comparison + "\n");
+		
+		// creating objects of LKWs
+		Fahrzeug volvo = new LKW("RGBG2019", false, COLOR.BLUE, 650, 12, 40);
+		Fahrzeug lkw1 = new LKW("RGBG2129", true, COLOR.BLUE, 750, 18, 41);
+		Fahrzeug volvo2 = new LKW("RGBG2019", false, COLOR.BLUE, 650, 12, 40);
+		Fahrzeug lkw2 = new LKW("RGBG2019", false, COLOR.BLUE, 650, 12, 40);
+		Fahrzeug lkw3 = new LKW("Hamburg1245", true, COLOR.YELLOW, 850, 18, 41);
+		
+		// create list of LKWs and add objects to it except of LKW2 and LKW3
+		List<Fahrzeug> list = new ArrayList<Fahrzeug>();
+		
+		list.add(volvo);
+		list.add(lkw1);
+		list.add(volvo2);
+		
+		if(list.contains(lkw3)) {
+			System.out.println("Gleicher LKW in der Liste gefunden.");
+		} else {
+			System.out.println("Kein gleicher LKW in der Liste gefunden.");
+		}
+		
+	}
+}
