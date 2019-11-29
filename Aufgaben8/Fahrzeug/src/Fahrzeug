@@ -1,0 +1,54 @@
+package fahrzeuge;
+
+public abstract class Fahrzeug {
+	// attributes
+	protected String Kennzeichen;
+	protected boolean istBenziner;
+	protected COLOR color;
+	protected int ps;
+	
+	// constructor
+	public Fahrzeug(String Kennzeichen, boolean istBenziner, COLOR color, int ps) {
+		this.Kennzeichen = Kennzeichen;
+		this.istBenziner = istBenziner;
+		this.color = color;
+		this.ps = ps;
+	}
+	
+	// getters and setters
+	public String getKennzeichen() {
+		return Kennzeichen;
+	}
+
+	public void setKennzeichen(String kennzeichen) {
+		Kennzeichen = kennzeichen;
+	}
+
+	public boolean isIstBenziner() {
+		return istBenziner;
+	}
+
+	public void setIstBenziner(boolean istBenziner) {
+		this.istBenziner = istBenziner;
+	}
+
+	public COLOR getColor() {
+		return color;
+	}
+
+	public void setColor(COLOR color) {
+		this.color = color;
+	}
+
+	public int getPs() {
+		return ps;
+	}
+
+	public void setPs(int ps) {
+		this.ps = ps;
+	}
+	
+	// methods
+	
+	
+}
