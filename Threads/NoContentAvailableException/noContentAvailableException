@@ -1,0 +1,8 @@
+package noContentAvailableException;
+
+public class NoContentAvailableException extends Exception {
+	public NoContentAvailableException(String string) {
+		super(string); // ruft Vaterklasse Exception auf und übergibt String
+	}
+	
+}
