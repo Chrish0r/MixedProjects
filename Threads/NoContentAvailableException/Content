@@ -1,0 +1,30 @@
+package noContentAvailableException;
+
+public class Content {
+	// attributes
+	 private int num;
+	
+	// getters and setters
+	 public int getNum() {
+		return num;
+	}
+	
+	/* public void setNum (int num) {
+		this.num = num;
+	}
+	*/
+	
+	// constructor 
+	public Content(int num) {
+		this.num = num;
+	}
+	
+	// methods
+	public int getContent() throws NoContentAvailableException {
+		if(getNum() == 4) {
+			return getNum();
+		} else {
+			throw new NoContentAvailableException("No content found!"); //Methode in dieser Klasse wird aufgerufen und StringWert übergeben
+		}
+	}
+}
